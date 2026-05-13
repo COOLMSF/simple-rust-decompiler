@@ -1,0 +1,18 @@
+[package]
+name = "simple-decompiler"
+version = "0.1.0"
+edition = "2021"
+description = "An x86/x86_64 binary decompiler that produces C code"
+
+[[bin]]
+name = "decomp"
+path = "src/main.rs"
+
+[dependencies]
+iced-x86 = { version = "1.21", features = ["decoder", "intel"] }
+goblin = "0.8"
+petgraph = "0.6"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+log = "0.4"
+env_logger = "0.11"
